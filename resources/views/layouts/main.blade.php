@@ -29,13 +29,13 @@
                     <li class="nav-item">
                         <a class="bt nav-link fs-5 ps text-uppercase" href="#">home</a>
                     </li>
-                    <li class="nav-item ms-4">
+                    <li class="nav-item margin">
                         <a class="bt nav-link fs-5 ps text-uppercase" href="#">our member</a>
                     </li>
-                    <li class="nav-item ms-4">
+                    <li class="nav-item margin">
                         <a class="bt nav-link fs-5 ps text-uppercase" href="#">about us</a>
                     </li>
-                    <li class="nav-item ms-4">
+                    <li class="nav-item margin">
                         <a class="bt nav-link fs-5 ps text-uppercase" href="#">contact</a>
                     </li>
                 </ul>

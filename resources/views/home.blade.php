@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="row w-100" style="height: 500px">
+<div class="row w-100 sh position-relative">
     <div class="col-5 bg-main"></div>
     <div class="col-1 bg-sec"></div>
     <div class="col-3 position-relative ps-0 pe-0">
