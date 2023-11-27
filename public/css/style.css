@@ -88,10 +88,6 @@ a {
 	transition: 0.3s;
 }
 
-.wt {
-	color: white !important;
-}
-
 .bt {
 	color: black !important;
 }
@@ -153,4 +149,31 @@ a {
 	.margin {
 		margin-left: 1.5rem !important;
 	}
+}
+
+.g-1 {
+	box-shadow: 0px -80px 200px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.g-2 {
+	box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.behind {
+	z-index: -1;
+}
+
+.about-us-style {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 10px;
+	transition: .3s;
+	color: white;
+}
+
+.about-us-style:hover {
+	background-color: var(--secondary-color);
+	color: #353939;
 }
