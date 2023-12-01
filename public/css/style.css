@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -21,7 +21,7 @@
 }
 
 .sh {
-	height: 500px;
+	height: 425px;
 }
 
 .pl-2 {
@@ -34,10 +34,6 @@
 
 .bg-bc {
 	background-color: var(--block-color);
-}
-
-.nav-bg {
-	background-color: var(--navbar-color);
 }
 
 .bg-yel {
@@ -56,27 +52,18 @@
 	background-color: var(--primary-color);
 }
 
-h1 {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 800;
-	margin: 0%;
-	color: var(--primary-color);
-}
-
-p {
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	font-weight: 600;
-	color: var(--primary-color);
-}
-
+h1,
+h6,
+p,
 a {
-	text-decoration: none;
-	color: var(--primary-color);
-}
-
-.ps {
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	font-weight: 600;
+	margin: 0%;
+	text-decoration: none;
+}
+
+.main {
+	color: var(--primary-color);
 }
 
 .rb {
@@ -126,6 +113,12 @@ a {
 	transition: 0.3s;
 }
 
+.medium-font {
+	font-size: 3.5vw;
+}
+
+/* Home Style */
+
 .shadow {
 	box-shadow: 0px 2px rgba(0, 0, 0, 0.267);
 }
@@ -133,21 +126,48 @@ a {
 .sbk-style {
 	bottom: 50px;
 	padding-left: 15px;
+	letter-spacing: 0.5px;
 }
 
 .grafiti-style {
 	mix-blend-mode: luminosity;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
 	.margin {
 		margin-left: 0 !important;
 	}
+
+	.small-font {
+		font-size: 2.5vw;
+	}
+
+	.large-font {
+		font-size: 5vw;
+	}
+
+	.navbar-content {
+		left: 0;
+		position: unset;
+	}
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 992px) {
 	.margin {
-		margin-left: 1.5rem !important;
+		margin-left: 1vw !important;
+	}
+
+	.small-font {
+		font-size: 2vw;
+	}
+
+	.large-font {
+		font-size: 4.75vw;
+	}
+
+	.navbar-content {
+		left: 35%;
+		position: absolute;
 	}
 }
 
@@ -164,11 +184,9 @@ a {
 }
 
 .about-us-style {
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-right: 10px;
+/*  Padding Top Right Bottom Left */
+	padding: 5px 50px 5px 50px;
+	margin: 0 10px 10px 0;
 	transition: .3s;
 	color: white;
 }
@@ -176,4 +194,16 @@ a {
 .about-us-style:hover {
 	background-color: var(--secondary-color);
 	color: #353939;
+}
+
+.line {
+	
+}
+
+/* Mikrotik Style */
+
+.mikrotik-first-style {
+	box-shadow: 0px -100px 150px 0px #9FF inset;
+	margin-top: 56px;
+	padding: 5vw;
 }
