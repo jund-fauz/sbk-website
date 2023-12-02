@@ -11,13 +11,12 @@
         <div class="col-2 bg-main g-2"></div>
         <div class="col-1 bg-sec"></div>
     </div>
-    <img class="grafiti-style position-absolute w-100" id="grafiti-sbk" src="{{  asset('assets/grafiti_sbk.png') }}" alt="Grafiti SBK">
-    <div class="video">
-        <video autoplay loop class="position-relative w-100 behind">
-            <source src="{{ asset('assets/testing.mp4') }}" type="video/mp4">
-            Please update your browser version
-        </video>
-    </div>
+    <img class="grafiti-style position-absolute w-100" id="grafiti-sbk" src="{{  asset('assets/grafiti_sbk.png') }}"
+        alt="Grafiti SBK">
+    <video autoplay loop class="position-relative w-100 behind video">
+        <source src="{{ asset('assets/testing.mp4') }}" type="video/mp4">
+        Please update your browser version
+    </video>
     <p class="text-uppercase position-absolute bottom-0 fs-2 ms-3">
         <span class="sec">bersama</span>
         <span class="main">sbk</span><br>
