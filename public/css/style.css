@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	transition: 0.3s;
 }
 
 :root {
@@ -131,6 +132,7 @@ a {
 
 .grafiti-style {
 	mix-blend-mode: luminosity;
+	z-index: 1;
 }
 
 @media only screen and (max-width: 991px) {
@@ -145,6 +147,10 @@ a {
 	.navbar-content {
 		left: 0;
 		position: unset;
+	}
+
+	.margin-when-large {
+		margin: 0 0 2vw 2vw;
 	}
 }
 
@@ -164,7 +170,16 @@ a {
 
 	.video {
 		background-color: var(--secondary-color) !important;
-		padding: 6vw;
+		padding: 6vw 6vw 4vw 6vw;
+	}
+
+	.margin-when-large {
+		margin: 0 0 6vw 8vw;
+	}
+	
+	.about-us-style {
+		margin: 0 8vw 6vw 0 !important;
+		padding: 1vw 4.5vw 1vw 4.5vw;
 	}
 }
 
@@ -176,15 +191,10 @@ a {
 	box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.behind {
-	z-index: -1;
-}
-
 .about-us-style {
-/*  Padding Top Right Bottom Left */
-	padding: 5px 50px 5px 50px;
-	margin: 0 10px 10px 0;
-	transition: .3s;
+	/*  Padding Top Right Bottom Left */
+	padding: 1vw 7vw 1vw 7vw;
+	margin: 0 2vw 2vw 0;
 	color: white;
 }
 
@@ -193,9 +203,10 @@ a {
 	color: #353939;
 }
 
-.line {
-	
+.video-container {
 }
+
+.line {}
 
 /* Mikrotik Style */
 
