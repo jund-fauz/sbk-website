@@ -1,0 +1,22 @@
+.translate-50 {
+    transform: translateY(35%);
+}
+
+.first-content {
+    grid-template-areas: "text" "icon";
+    grid-template-columns: 60% 40%;
+}
+
+.text {
+    grid-area: "text";
+}
+
+.text > h1 {
+    font-weight: 700;
+    font-size: 6rem;
+}
+
+.text > h2 {
+    font-weight: 700;
+    font-size: 3rem;
+}
