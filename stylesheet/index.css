@@ -11,12 +11,52 @@
     grid-area: "text";
 }
 
+.icon {
+    grid-area: "icon";
+    filter: sepia();
+    margin-top: -4vw;
+    width: 90%;
+}
+
 .text > h1 {
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 7vw;
+    margin-bottom: 0;
 }
 
 .text > h2 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+
+.button {
+    font-weight: 500;
+    border-radius: .5vw;
+    padding: .7vw 1.2vw;
+    font-size: 1.3vw;
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+.reverse-hover:hover {
+    background-color: var(--secondary-color) !important;
+    color: white;
+}
+
+.second-content {
+    height: 40px;
+    margin-top: -10px;
+}
+
+.bg-color-primary {
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 1279px) {
+    .translate-50 {
+        transform: translateY(20vw);
+    }
 }
