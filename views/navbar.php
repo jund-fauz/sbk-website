@@ -1,5 +1,5 @@
 <nav>
-    <a href="index.html">
+    <a href="index.php">
         <img class="position-absolute top-50" src="pictures/sbk-navbar.png" alt="SBK">
     </a>
     <div class="position-absolute top-50 start-50 translate-middle d-flex">

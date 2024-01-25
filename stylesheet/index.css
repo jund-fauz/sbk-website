@@ -92,6 +92,8 @@
 
 .grid-4 {
     grid-template-areas: "first" "second";
+    column-gap: 3vw;
+    height: 7vw;
 }
 
 .grid-4:nth-child(2) {
@@ -116,6 +118,19 @@
 
 .grid-4:nth-child(2) > div:first-child {
     background-color: #9df;
+}
+
+.grid-4:nth-child(2) > div:last-child {
+    background-color: #5aadd7;
+}
+
+.pt-4 h1 {
+    color: white;
+    font-weight: bold;
+}
+
+pt-4 > .container .container {
+    position: relative;
 }
 
 @media screen and (max-width: 1279px) {
