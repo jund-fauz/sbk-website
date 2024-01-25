@@ -9,16 +9,15 @@
   padding: 0;
   margin: 0;
   font-family: "Barlow Semi Condensed", sans-serif;
-  color: white;
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-transform: capitalize;
-  transition: .4s;
 }
 
 a {
   color: white;
   text-decoration: none;
+  transition: .4s;
 }
 
 nav {
@@ -31,7 +30,7 @@ nav {
 
 nav > a > img {
   left: 3%;
-  transform: scale(0.8);
+  transform: translateY(-50%) scale(0.8);
 }
 
 nav > div {
@@ -63,8 +62,13 @@ nav > div a:hover:after {
   transform-origin: bottom left;
 }
 
+nav > a > i {
+  right: 2%;
+}
+
 footer {
   background-color: black;
+  color: white;
 }
 
 footer p {
@@ -80,4 +84,5 @@ footer > hr {
 
 footer > p:last-child {
   padding-bottom: 20px;
+  margin-bottom: 0;
 }

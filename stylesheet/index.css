@@ -2,9 +2,17 @@
     transform: translateY(35%);
 }
 
-.first-content {
+.a-first {
+    display: grid;
     grid-template-areas: "text" "icon";
     grid-template-columns: 60% 40%;
+}
+
+.p-first {
+    display: grid;
+    grid-template-areas: "icon" "text";
+    grid-template-columns: 40% 60%;
+    column-gap: 5vw;
 }
 
 .text {
@@ -13,19 +21,21 @@
 
 .icon {
     grid-area: "icon";
-    filter: sepia();
-    margin-top: -4vw;
-    width: 90%;
 }
 
-.text > h1 {
-    font-weight: 700;
+.sepia {
+    margin-top: -4vw;
+    width: 90%;
+    filter: sepia();
+}
+
+.title {
     font-size: 7vw;
     margin-bottom: 0;
 }
 
-.text > h2 {
-    font-weight: 700;
+.subtitle {
+    font-weight: 600;
     font-size: 3.5vw;
     margin-bottom: 2vw;
 }
@@ -34,16 +44,25 @@
     font-weight: 500;
     border-radius: .5vw;
     padding: .7vw 1.2vw;
-    font-size: 1.3vw;
+    font-size: clamp(10px 1.3vw);
 }
 
 .color-secondary {
     color: var(--secondary-color);
 }
 
-.reverse-hover:hover {
-    background-color: var(--secondary-color) !important;
+.reverse-1:hover {
+    background-color: var(--primary-color) !important;
     color: white;
+}
+
+.reverse-2 {
+    border: 1px solid;
+}
+
+.reverse-2:hover {
+    background-color: white !important;
+    color: var(--primary-color);
 }
 
 .second-content {
@@ -55,8 +74,58 @@
     background-color: var(--primary-color);
 }
 
+.third-content {
+    margin: 5vw 0;
+}
+
+.cmb-1 {
+    margin-bottom: 2vw;
+}
+
+.cmt-1 {
+    margin-top: 6vw;
+}
+
+.text > p {
+    padding-right: 6vw;
+}
+
+.grid-4 {
+    grid-template-areas: "first" "second";
+}
+
+.grid-4:nth-child(2) {
+    grid-template-columns: 70% 30%;
+}
+
+.grid-4:last-child {
+    grid-template-columns: 30% 70%;
+}
+
+.grid-4 > div:first-child {
+    grid-area: "first";
+}
+
+.grid-4 > div:last-child {
+    grid-area: "second";
+}
+
+.grid-4 > div {
+    border-radius: .5vw;
+}
+
+.grid-4:nth-child(2) > div:first-child {
+    background-color: #9df;
+}
+
 @media screen and (max-width: 1279px) {
     .translate-50 {
         transform: translateY(20vw);
+    }
+}
+
+@media (min-width: 1280px) {
+    .text > p {
+        padding-right: 10vw;
     }
 }
