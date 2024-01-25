@@ -2,21 +2,145 @@
     transform: translateY(35%);
 }
 
-.first-content {
+.a-first {
+    display: grid;
     grid-template-areas: "text" "icon";
     grid-template-columns: 60% 40%;
+}
+
+.p-first {
+    display: grid;
+    grid-template-areas: "icon" "text";
+    grid-template-columns: 40% 60%;
+    column-gap: 5vw;
 }
 
 .text {
     grid-area: "text";
 }
 
-.text > h1 {
-    font-weight: 700;
-    font-size: 6rem;
+.icon {
+    grid-area: "icon";
 }
 
-.text > h2 {
-    font-weight: 700;
-    font-size: 3rem;
+.sepia {
+    margin-top: -4vw;
+    width: 90%;
+    filter: sepia();
+}
+
+.title {
+    font-size: 7vw;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+
+.button {
+    font-weight: 500;
+    border-radius: .5vw;
+    padding: .7vw 1.2vw;
+    font-size: clamp(10px 1.3vw);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+.reverse-1:hover {
+    background-color: var(--primary-color) !important;
+    color: white;
+}
+
+.reverse-2 {
+    border: 1px solid;
+}
+
+.reverse-2:hover {
+    background-color: white !important;
+    color: var(--primary-color);
+}
+
+.second-content {
+    height: 40px;
+    margin-top: -10px;
+}
+
+.bg-color-primary {
+    background-color: var(--primary-color);
+}
+
+.third-content {
+    margin: 5vw 0;
+}
+
+.cmb-1 {
+    margin-bottom: 2vw;
+}
+
+.cmt-1 {
+    margin-top: 6vw;
+}
+
+.text > p {
+    padding-right: 6vw;
+}
+
+.grid-4 {
+    grid-template-areas: "first" "second";
+    column-gap: 3vw;
+    height: 7vw;
+}
+
+.grid-4:nth-child(2) {
+    grid-template-columns: 70% 30%;
+}
+
+.grid-4:last-child {
+    grid-template-columns: 30% 70%;
+}
+
+.grid-4 > div:first-child {
+    grid-area: "first";
+}
+
+.grid-4 > div:last-child {
+    grid-area: "second";
+}
+
+.grid-4 > div {
+    border-radius: .5vw;
+}
+
+.grid-4:nth-child(2) > div:first-child {
+    background-color: #9df;
+}
+
+.grid-4:nth-child(2) > div:last-child {
+    background-color: #5aadd7;
+}
+
+.pt-4 h1 {
+    color: white;
+    font-weight: bold;
+}
+
+pt-4 > .container .container {
+    position: relative;
+}
+
+@media screen and (max-width: 1279px) {
+    .translate-50 {
+        transform: translateY(20vw);
+    }
+}
+
+@media (min-width: 1280px) {
+    .text > p {
+        padding-right: 10vw;
+    }
 }
