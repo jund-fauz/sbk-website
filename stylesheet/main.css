@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 
 :root {
   --primary-color: #0079B7;
@@ -8,9 +8,10 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Barlow", sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 h1, h2, a {
@@ -28,7 +29,7 @@ nav {
   height: 60px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 nav > a > img {
