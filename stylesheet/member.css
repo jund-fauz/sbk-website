@@ -1,8 +1,36 @@
 .title {
-    font-weight: bolder;
-    color: #004669;
+  font-weight: bolder;
+  color: #004669;
 }
 
 .ms-4:first-child {
-    scale: 80%;
+  scale: 80%;
 }
+
+button {
+  background-color: white;
+  color: #004669;
+  transition: 0.3s;
+  padding: 0.7vw 2.5vw;
+  border: 0;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: rgba(0, 70, 105, 0.5137254902);
+  color: white;
+}
+
+button.active {
+  background-color: #004669;
+  color: white;
+}
+
+button.active:hover {
+  background-color: rgba(0, 70, 105, 0.5137254902);
+  color: #004669;
+}
+
+.member-container {
+  background-color: #004669;
+}/*# sourceMappingURL=member.css.map */

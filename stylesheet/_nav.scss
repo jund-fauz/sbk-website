@@ -1,0 +1,51 @@
+nav {
+    background-color: black;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+nav> {
+    a> {
+        img {
+            left: 3%;
+            transform: translateY(-50%) scale(0.8);
+        }
+
+        i {
+            right: 2%;
+        }
+    }
+
+    div {
+        width: fit-content;
+        column-gap: 2rem;
+    }
+
+    div {
+        a {
+            display: inline-block;
+            position: relative;
+        }
+
+        a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transform-origin: bottom right;
+            transition: transform .25s ease-out;
+        }
+
+
+        a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}

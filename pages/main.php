@@ -94,7 +94,7 @@
                 <p class="text-white mt-2">Belajar dasar jaringan dengan materi yang praktis dan interaktif</p>
             </div>
             <div class="icon">
-                <span class="play"></span>
+                <a href="#" class="play"></a>
             </div>
         </div>
     </div>
