@@ -1,3 +1,8 @@
 .title {
+    font-weight: bolder;
     color: #004669;
+}
+
+.ms-4:first-child {
+    scale: 80%;
 }
