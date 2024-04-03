@@ -1,0 +1,55 @@
+@import 'main';
+
+$primary-color: #004669;
+$primary-color-hover: #00466983;
+
+.title {
+    font-weight: bolder;
+    color: $primary-color;
+}
+
+.ms-4:first-child {
+    scale: 80%;
+}
+
+button {
+    background-color: white;
+    color: $primary-color;
+    transition: .3s;
+    padding: 0.7vw 2.5vw;
+    border: 0;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: $primary-color-hover;
+    color: white;
+}
+
+button.active {
+    background-color: $primary-color;
+    color: white;
+}
+
+button.active:hover {
+    background-color: $primary-color-hover;
+    color: $primary-color;
+}
+
+.member-container {
+    background-color: $primary-color;
+}
+
+.custom-container {
+    max-width: 60%;
+}
+
+.custom-container> {
+    h1 {
+        width: fit-content;
+    }
+}
+
+p {
+    text-transform: capitalize;
+}
