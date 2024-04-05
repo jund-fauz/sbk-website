@@ -1,12 +1,14 @@
-function Petinggi({jabatan, nama, gambar, alt, marginTop}) {
+import style from '../../stylesheet/member.module.css'
+
+export default function Petinggi({jabatan, nama, gambar, alt, mt, my}) {
   return (
-    <div className={"position-relative mt-" + marginTop}>
+    <div className={`position-relative bg-white mt-${mt}`}>
       <img
-        src={`/pictures/${gambar}`}
+        src={`/pictures/${gambar}.png`}
         alt={alt}
-        className="mt-2 ms-4 rounded"
+        className={`my-${my} ms-4 rounded`}
       />
-      <h1 className="title text-center position-absolute top-0 w-100">
+      <h1 className={`${style.title} text-center position-absolute w-100`} style={{top: `${my / 2}vw`}}>
         {jabatan}
       </h1>
       <p className="text-black text-capitalize position-absolute top-50 start-50 translate-middle">
@@ -15,5 +17,3 @@ function Petinggi({jabatan, nama, gambar, alt, marginTop}) {
     </div>
   )
 }
-
-export default Petinggi

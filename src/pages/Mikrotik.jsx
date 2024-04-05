@@ -1,7 +1,5 @@
 import AnimatedPage from "../partials/animation/AnimatedPage.jsx";
 
-function Mikrotik() {
+export default function Mikrotik() {
   return <AnimatedPage></AnimatedPage>
 }
-
-export default Mikrotik

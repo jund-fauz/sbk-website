@@ -1,6 +1,6 @@
 import Card from "./Card.jsx";
 
-function Cards() {
+export default function Cards() {
   return (
     <div className="bg-white third-content">
       <Card
@@ -11,12 +11,12 @@ function Cards() {
           Belajar coding dapat membuka berbagai peluang karir di bidang
           teknologi dan juga dapat meningkatkan keterampilan pemecahan masalah
           dalam kehidupan.'
-        gambar='bg-2.png'
+        gambar='bg-2'
       />
       <Card
         judul='computer & network ability'
         isi='Dapatkan pengalaman belajar, keterampilan, pengetahuan, dan sikap kompeten lebih banyak  dalam merakit, menginstall program,  merawat dan memperbaiki komputer serta jaringannya.'
-        gambar='bg-3.png'
+        gambar='bg-3'
         reverse={true}
       />
       <Card
@@ -27,10 +27,8 @@ function Cards() {
               Belajar coding dapat membuka berbagai peluang karir di bidang
               teknologi dan juga dapat meningkatkan keterampilan pemecahan masalah
               dalam kehidupan.'
-        gambar='bg-4.png'
+        gambar='bg-4'
       />
     </div>
   )
 }
-
-export default Cards

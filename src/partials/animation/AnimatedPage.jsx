@@ -6,7 +6,7 @@ const animation = {
   exit: {opacity: 0, x: 100}
 }
 
-function AnimatedPage({children, onScroll}) {
+export default function AnimatedPage({children, onScroll, bgColor = 'white'}) {
   return (
     <motion.div
       variants={animation}
@@ -14,10 +14,9 @@ function AnimatedPage({children, onScroll}) {
       animate='animate'
       exit='exit'
       onScroll={onScroll}
+      style={{backgroundColor: bgColor}}
     >
       {children}
     </motion.div>
   )
 }
-
-export default AnimatedPage

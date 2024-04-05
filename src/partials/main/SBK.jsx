@@ -1,4 +1,4 @@
-function SBK() {
+export default function SBK() {
   return (
     <div className="w-100 h-100 bgi-1">
       <div className="a-first container">
@@ -14,5 +14,3 @@ function SBK() {
     </div>
   )
 }
-
-export default SBK

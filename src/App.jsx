@@ -6,7 +6,7 @@ import './stylesheet/main.css'
 import Navbar from "./partials/core/Navbar.jsx";
 import Footer from "./partials/core/Footer.jsx";
 
-function App() {
+export default function App() {
   return (
     <Router>
         <Navbar/>
@@ -19,5 +19,3 @@ function App() {
     </Router>
   )
 }
-
-export default App

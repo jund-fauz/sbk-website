@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function AnotherFeaturesOfSBK() {
+export default function AnotherFeaturesOfSBK() {
   const parallax = () => {
     const scroll = window.scrollY - 1711
     setClipLong(`polygon(0 0, ${20 + scroll / 15}% 0, ${3 + scroll / 15}% 100%, 0 100%)`)
@@ -17,29 +17,27 @@ function AnotherFeaturesOfSBK() {
           <div className="container position-relative">
             <span className="overlay bg-1" style={{clipPath: clipLong}}/>
             <h1 className='text-white'>sBK store</h1>
-            <a href="#">Let’s go shopping -&gt;</a>
+            <a href="#">Let’s go shopping →</a>
           </div>
           <div className="container position-relative">
             <span className="overlay bg-5" style={{clipPath: clipShort}}/>
             <h1 className='text-white'>member</h1>
-            <a href="#">know us -&gt;</a>
+            <a className='text-white' href="#">know us →</a>
           </div>
         </div>
         <div className="d-grid grid-4">
           <div className="container position-relative">
             <span className="overlay bg-3" style={{clipPath: clipShort}}/>
             <h1>sBK xtra</h1>
-            <a href="#">check another things -&gt;</a>
+            <a href="#">check another things →</a>
           </div>
           <div className="container position-relative">
             <span className="overlay bg-4" style={{clipPath: clipLong}}/>
             <h1>mIKROTIK academy</h1>
-            <a href="#">learn more -&gt;</a>
+            <a href="#">learn more →</a>
           </div>
         </div>
       </div>
     </div>
   )
 }
-
-export default AnotherFeaturesOfSBK

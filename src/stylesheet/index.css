@@ -37,10 +37,6 @@
     & > h1 {
         font-weight: 900;
     }
-
-    & > p {
-        max-width: 32vw;
-    }
 }
 
 .icon {
@@ -118,10 +114,6 @@
 
 .pt-5 {
     padding-bottom: 280px;
-}
-
-.text > p {
-    padding-right: 6vw;
 }
 
 .grid-4 {
@@ -253,7 +245,11 @@
 
     & .icon {
         width: 120px;
-        aspect-ratio: 4/3;
+        height: 96px;
+    }
+
+    .text {
+        height: 96px;
     }
 }
 
@@ -288,7 +284,7 @@
 
 div {
     & > span {
-        transition: .3s;
+        transition: .4s;
     }
 
     &:hover > span {
@@ -299,11 +295,5 @@ div {
 @media screen and (max-width: 1279px) {
     .translate-50 {
         transform: translateY(20vw);
-    }
-}
-
-@media (min-width: 1280px) {
-    .text > p {
-        padding-right: 10vw;
     }
 }

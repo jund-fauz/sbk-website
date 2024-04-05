@@ -1,25 +1,30 @@
-import Petinggi from "../partials/member/Petinggi.jsx";
-import AnimatedPage from "../partials/animation/AnimatedPage.jsx";
+import Petinggi from "../partials/member/Petinggi.jsx"
+import AnimatedPage from "../partials/animation/AnimatedPage.jsx"
+import GenSwitch from "../partials/member/GenSwitch.jsx"
+import {useSearchParams} from "react-router-dom"
+import {useState} from "react"
+import Struktur from "../partials/member/Struktur.jsx"
+import Gen12 from "../partials/member/Gen12.jsx"
+import Gen13 from "../partials/member/Gen13.jsx"
 
-function Member() {
+export default function Member() {
+  const [query] = useSearchParams()
+  const [gen, setGen] = useState(parseInt(query.get('gen')))
+  const changeGen = (gen) => {
+    window.history.replaceState({}, '', `/member?gen=${gen}`)
+    setGen(gen)
+  }
+
   return (
-    <AnimatedPage>
-      <Petinggi jabatan='penanggung jawab' nama='devit hari ashari, s.pd.' marginTop='2' gambar='devit-cache.png'
-                alt='Ustadz Devit Hari Ashari'/>
-      <hr/>
-      <Petinggi jabatan='pembina' nama='diantika arifianti, s.t.' marginTop='3' gambar='devit-cache.png' alt='Ustadzah Dian'/>
-      <div className="d-flex justify-content-center fs-3 mb-2">
-        <button type="button" className="active">
-          Gen 12
-        </button>
-        <button type="button">Gen 13</button>
-      </div>
-      <div className="member-container p-4 pt-5 mt-5">
-        {/*?php include 'pages/gen12.php' ?*/}
-      </div>
+    <AnimatedPage bgColor='#CECECE'>
+      <Petinggi jabatan='penanggung jawab' nama='devit hari ashari, s.pd.' gambar='devit-cache'
+                alt='Ustadz Devit Hari Ashari' mt='0' my='3'/>
+      <Petinggi jabatan='pembina' nama='diantika arifianti, s.t.' gambar='devit-cache' alt='Ustadzah Dian' mt='5' my='4'/>
+      <GenSwitch gen={gen} changeGen={changeGen} />
+      <Struktur>
+        {gen === 12 ? (<Gen12/>) : (<Gen13/>)}
+      </Struktur>
     </AnimatedPage>
 
   )
 }
-
-export default Member
