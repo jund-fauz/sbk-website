@@ -3,6 +3,7 @@
 :root {
     --bg-primary-color: #5e9cbb;
     --gray-color: #353939;
+    --bg-btn: #0079b7;
 }
 
 * {
@@ -32,6 +33,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 3;
+
     & > a {
         & > img {
             left: 3%;
@@ -46,10 +48,8 @@ nav {
     & > div {
         width: fit-content;
         column-gap: 2rem;
-    }
 
-    & > div {
-        a {
+        & > a {
             display: inline-block;
             position: relative;
 
@@ -72,11 +72,16 @@ nav {
             }
         }
     }
+
+    & > .dropdown {
+        top: 50%;
+    }
 }
 
 footer {
     background-color: var(--bg-primary-color);
     color: white;
+
     & > p {
         text-align: center;
         padding-top: 20px;

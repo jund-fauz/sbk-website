@@ -21,6 +21,7 @@
     display: grid;
     grid-template-areas: 'text' 'icon';
     grid-template-columns: 60% 40%;
+    column-gap: 5vw;
 }
 
 .p-first {
@@ -28,6 +29,10 @@
     grid-template-areas: 'icon' 'text';
     grid-template-columns: 40% 60%;
     column-gap: 5vw;
+}
+
+.card-container {
+    margin-left: 6vw;
 }
 
 .text {
@@ -108,8 +113,9 @@
     }
 }
 
-.cmb-1 {
+.text-card {
     margin-bottom: 2vw;
+    max-width: 80%;
 }
 
 .pt-5 {
@@ -262,7 +268,7 @@
 }
 
 .grid-1 > .icon {
-    background-color: #0079b7;
+    background-color: var(--bg-btn);
     display: grid;
     place-items: center;
 }
@@ -290,6 +296,10 @@ div {
     &:hover > span {
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
     }
+}
+
+.hover-dark:hover {
+    /*filter: contrast(70%);*/
 }
 
 @media screen and (max-width: 1279px) {

@@ -22,7 +22,7 @@ export default function AnotherFeaturesOfSBK() {
           <div className="container position-relative">
             <span className="overlay bg-5" style={{clipPath: clipShort}}/>
             <h1 className='text-white'>member</h1>
-            <a className='text-white' href="#">know us →</a>
+            <a className='text-white' href="/member?gen=13">know us →</a>
           </div>
         </div>
         <div className="d-grid grid-4">
@@ -34,7 +34,7 @@ export default function AnotherFeaturesOfSBK() {
           <div className="container position-relative">
             <span className="overlay bg-4" style={{clipPath: clipLong}}/>
             <h1>mIKROTIK academy</h1>
-            <a href="#">learn more →</a>
+            <a href="/mikrotik">learn more →</a>
           </div>
         </div>
       </div>
