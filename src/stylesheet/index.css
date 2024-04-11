@@ -233,7 +233,8 @@
 
 .grid-1 {
     grid-template-areas: 'text' 'icon';
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 62% 20%;
+    gap: 18%;
     margin-top: 13vw;
     margin-bottom: 1.3vw;
     z-index: 1;
@@ -250,12 +251,19 @@
     }
 
     & .icon {
-        width: 120px;
-        height: 96px;
+        width: 100px;
+        border-radius: 8px;
     }
 
     .text {
         height: 96px;
+        border-radius: 0 16px 16px 0;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+        background-color: rgba(90, 173, 215, .75);
+        & > p {
+            font-size: 14px;
+            font-weight: 300;
+        }
     }
 }
 
@@ -264,7 +272,6 @@
     left: 12.5vw;
     bottom: 8vw;
     width: 70%;
-    padding: 0 3vw;
 }
 
 .grid-1 > .icon {

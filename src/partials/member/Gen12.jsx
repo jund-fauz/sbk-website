@@ -28,19 +28,60 @@ export default function Gen12() {
       <StrukturalCard
         jabatan='Lab Barat'
         members={[
-
+          {
+            nama: 'Kholid Husam Habibullah',
+            panggilan: 'kholid'
+          }, {
+            nama: 'Ghozi Matta Alfaruq',
+            panggilan: 'ghozi'
+          }, {
+            nama: 'Mujadid Jundi Fauzi',
+            panggilan: 'jundi'
+          }, {
+            nama: 'Qonita Firdausi'
+          }, {
+            nama: 'Annisa Nurul ‘Aini'
+          }
         ]}
       />
       <StrukturalCard
         jabatan='Lab Tengah'
         members={[
-
+          {
+            nama: 'Muhammad Syaif Alfatih',
+            panggilan: 'syaif'
+          }, {
+            nama: 'Roshan Muhammad Arfan',
+            panggilan: 'roshan'
+          }, {
+            nama: 'Dzakiyyatunnisa Fara Atikah',
+          }, {
+            nama: 'Asyifa Salsabila'
+          }, {
+            nama: 'Siti Rismawati'
+          }
         ]}
+        ikhwan={2}
       />
       <StrukturalCard
         jabatan='Lab Timur'
         members={[
-
+          {
+            nama: 'Imam Irsyad Ma’ruf',
+            panggilan: 'imam'
+          }, {
+            nama: 'Arqian Hamzah',
+            panggilan: 'hamzah'
+          }, {
+            nama: 'Gavra Darius Ulul Albab',
+            panggilan: 'gavra'
+          }, {
+            nama: 'Nayla Nur Hidayah'
+          }, {
+            nama: 'Khaylila As Saudah Ramadhani'
+          }, {
+            nama: 'Anjani Arizkawati'
+          }
         ]}
       />
       <StrukturalCard
@@ -60,5 +101,5 @@ export default function Gen12() {
         ]}
       />
     </>
-  )
+  );
 }

@@ -85,7 +85,18 @@ export default function Gen13() {
       <StrukturalCard
         jabatan='Logistik'
         members={[
-
+          {
+            nama: 'Ghozi Matta Alfaruq',
+            panggilan: 'ghozi'
+          }, {
+            nama: 'Muhammad Hafiq Fairul Anam'
+          }, {
+            nama: 'Muhammad Rifa Rizqullah'
+          }, {
+            nama: 'Fatimah Syafawani'
+          }, {
+            nama: 'Khaylila As Saudah Ramadhani'
+          }
         ]}
       />
     </>

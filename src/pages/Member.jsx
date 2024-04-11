@@ -2,7 +2,7 @@ import Petinggi from "../partials/member/Petinggi.jsx"
 import AnimatedPage from "../partials/animation/AnimatedPage.jsx"
 import GenSwitch from "../partials/member/GenSwitch.jsx"
 import {useSearchParams} from "react-router-dom"
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import Struktur from "../partials/member/Struktur.jsx"
 import Gen12 from "../partials/member/Gen12.jsx"
 import Gen13 from "../partials/member/Gen13.jsx"
@@ -14,6 +14,14 @@ export default function Member() {
     window.history.replaceState({}, '', `/member?gen=${gen}`)
     setGen(gen)
   }
+  
+  useEffect(() => {
+    const genParam = parseInt(query.get('gen'))
+    if (genParam !== 12 && genParam !== 13) {
+      setGen(13)
+      window.history.replaceState({}, '', '/member?gen=13')
+    }
+  }, [query])
 
   return (
     <AnimatedPage bgColor='#CECECE'>
