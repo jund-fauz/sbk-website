@@ -33,6 +33,14 @@
 
 .card-container {
     margin-left: 6vw;
+
+    & > .icon {
+        transition: .3s;
+
+        &:hover {
+            scale: 110%;
+        }
+    }
 }
 
 .text {
@@ -106,7 +114,10 @@
 }
 
 .third-content {
-    margin: 5vw 0;
+    padding: 5vw 0;
+    background-image: url('../pictures/bg-modern.png');
+    background-size: 100%;
+    background-attachment: fixed;
 
     & > div:not(:first-child) {
         margin-top: 6vw;
