@@ -1,3 +1,3 @@
 export default function BGBlack() {
-  return (<div className="bg-black second-content w-100"/>)
+  return (<div className="second-content w-100 bg-color-primary"/>)
 }

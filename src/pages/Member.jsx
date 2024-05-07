@@ -14,7 +14,7 @@ export default function Member() {
     window.history.replaceState({}, '', `/member?gen=${gen}`)
     setGen(gen)
   }
-  
+
   useEffect(() => {
     const genParam = parseInt(query.get('gen'))
     if (genParam !== 12 && genParam !== 13) {
@@ -25,10 +25,13 @@ export default function Member() {
 
   return (
     <AnimatedPage bgColor='#CECECE'>
-      <Petinggi jabatan='penanggung jawab' nama='devit hari ashari, s.pd.' gambar='devit-cache'
-                alt='Ustadz Devit Hari Ashari' mt='0' my='3'/>
-      <Petinggi jabatan='pembina' nama='diantika arifianti, s.t.' gambar='devit-cache' alt='Ustadzah Dian' mt='5' my='4'/>
-      <GenSwitch gen={gen} changeGen={changeGen} />
+      <div className='d-flex flex-column align-items-center'>
+        <Petinggi jabatan='penanggung jawab' nama='devit hari ashari, s.pd.' gambar='devit-cache'
+                  alt='Ustadz Devit Hari Ashari' mt='0' my='3'/>
+        <Petinggi jabatan='pembina' nama='diantika arifianti, s.t.' gambar='devit-cache' alt='Ustadzah Dian' mt='5'
+                  my='4'/>
+      </div>
+      <GenSwitch gen={gen} changeGen={changeGen}/>
       <Struktur>
         {gen === 12 ? (<Gen12/>) : (<Gen13/>)}
       </Struktur>

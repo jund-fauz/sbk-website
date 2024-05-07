@@ -18,17 +18,17 @@ export default function Navbar() {
       </a>
       <div className="position-absolute top-50 start-50 translate-middle d-flex">
         <a href="/mikrotik">mikrotik</a>
-        <a href="#">learn basic</a>
+        <a href="/learn-basic">learn basic</a>
         <a href="/member?gen=13" ref={ref => {
           memberRef = ref
         }}>member</a>
-        <a href="#">xtra</a>
+        <a href="/xtra">xtra</a>
       </div>
       {/*<div className='position-absolute dropdown' style={{right: `${right}px`}}>*/}
       {/*  <a href="#">Test</a>*/}
       {/*</div>*/}
-      <a href="#">
-        <i className="fa-solid fa-cart-shopping position-absolute top-50 translate-middle-y"/>
+      <a href="/sbk-store" className='position-absolute top-50 translate-middle-y'>
+        <i className="fa-solid fa-cart-shopping"/>
       </a>
     </nav>
 

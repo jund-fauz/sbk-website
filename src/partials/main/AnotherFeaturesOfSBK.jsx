@@ -2,7 +2,7 @@ import {useState} from "react";
 
 export default function AnotherFeaturesOfSBK() {
   const parallax = () => {
-    const scroll = window.scrollY - 1711
+    const scroll = window.scrollY - 2711
     setClipLong(`polygon(0 0, ${20 + scroll / 15}% 0, ${3 + scroll / 15}% 100%, 0 100%)`)
     setClipShort(`polygon(0 0, ${30 + scroll / 15}% 0, ${3 + scroll / 15}% 100%, 0 100%)`)
   }

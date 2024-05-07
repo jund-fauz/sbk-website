@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       {/*<FooterAnimation />*/}
       <footer className='position-relative'>
-        <MaskotKucing />
+        {/*<MaskotKucing />*/}
         <p>Social</p>
         <hr className="bg-white"/>
         <p>Copyright© SBK 2024</p>

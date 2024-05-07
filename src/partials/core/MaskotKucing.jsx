@@ -21,6 +21,7 @@ export default function MaskotKucing() {
   return <img src={`/pictures/kucing-${mripat}.png`} alt="MaskotKucing" style={{
     position: 'absolute',
     top: '-65%',
-    right: '5%'
+    right: '5%',
+    zIndex: 1
   }}/>
 }

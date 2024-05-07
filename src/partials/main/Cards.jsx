@@ -2,7 +2,7 @@ import Card from "./Card.jsx";
 
 export default function Cards() {
   return (
-    <div className="bg-white third-content">
+    <>
       <Card
         judul='learn coding'
         isi='Peroleh kemampuan untuk membuat situs web, aplikasi seluler, perangkat
@@ -29,6 +29,6 @@ export default function Cards() {
               dalam kehidupan.'
         gambar='bg-4'
       />
-    </div>
+    </>
   )
 }

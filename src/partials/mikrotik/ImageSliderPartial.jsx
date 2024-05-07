@@ -1,76 +1,88 @@
-import {item, content, title, description, nav, btn} from '../../stylesheet/mikrotik.module.css'
+import {body, btn, main, nav} from '../../stylesheet/mikrotik.module.css'
+import ImageSlider from "./ImageSlider.jsx";
+import ImageSliderContainer from "./ImageSliderContainer.jsx";
+import {useEffect, useState} from "react";
 
+const contents = [
+  {
+    title: 'Lossless Youths',
+    image: 'cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  },
+  {
+    title: 'vlan configuration',
+    image: 'i.redd.it/tc0aqpv92pn21.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  },
+  {
+    title: 'The Gate Keeper',
+    image: 'wharferj.files.wordpress.com/2015/11/bio_north.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  },
+  {
+    title: 'Last Trace Of Us',
+    image: 'images7.alphacoders.com/878/878663.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  },
+  {
+    title: 'Urban Decay',
+    image: 'theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  },
+  {
+    title: 'The Migration',
+    image: 'da.se/app/uploads/2015/09/simon-december1994.jpg',
+    description: ` Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+              praesentium nisi. Id laboriosam ipsam enim. `
+  }
+]
 
+export default function ImageSliderPartial() {
+  const [contentComponent, setContentComponent] = useState(contents.map((content, key) => {
+    let {title, image, description} = content
+    return <ImageSlider title={title} image={image} description={description} key={key}/>
+  }))
 
-export default function ImageSliderContainer() {
+  function activate(isNext) {
+    const nextContentComponent = isNext ? [
+      ...contentComponent.slice(1),
+      contentComponent[0]
+    ] : [
+      ...contentComponent.slice(-1),
+      ...contentComponent.slice(0, -1)
+    ]
+    setContentComponent(nextContentComponent)
+  }
+
+  useEffect(() => {
+    console.log(contentComponent.slice(-1))
+  }, [contentComponent])
   return (
-    <div>
-      <ul>
-        <li className={item}
-            style={{backgroundImage: "url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"Lossless Youths"</h2>
-            <p className={description}> Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim. </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li className={item} style={{backgroundImage: "url('https://i.redd.it/tc0aqpv92pn21.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"Estrange Bond"</h2>
-            <p className={description}> Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim. </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li className={item}
-            style={{backgroundImage: "url('https://wharferj.files.wordpress.com/2015/11/bio_north.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"The Gate Keeper"</h2>
-            <p className={description}> Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim. </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li className={item} style={{backgroundImage: "url('https://images7.alphacoders.com/878/878663.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"Last Trace Of Us"</h2>
-            <p className={description}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim.
-            </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li className={item}
-            style={{backgroundImage: "url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"Urban Decay"</h2>
-            <p className={description}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim.
-            </p>
-            <button>Read More</button>
-          </div>
-        </li>
-        <li className={item} style={{backgroundImage: "url('https://da.se/app/uploads/2015/09/simon-december1994.jpg')"}}>
-          <div className={content}>
-            <h2 className={title}>"The Migration"</h2>
-            <p className={description}> Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-              praesentium nisi. Id laboriosam ipsam enim. </p>
-            <button>Read More</button>
-          </div>
-        </li>
-      </ul>
-      <nav className={nav}>
-        <i className={`${btn} prev fa-solid fa-arrow-right`}></i>
-        {/*<ion-icon className={`${btn} prev`} name="arrow-back-outline"></ion-icon>*/}
-        {/*<ion-icon className={`${btn} next`} name="arrow-forward-outline"></ion-icon>*/}
-      </nav>
+    <div className={body}>
+      <div className={main}>
+        <ImageSliderContainer>
+          {contentComponent}
+        </ImageSliderContainer>
+        <div className={nav}>
+          <button className={btn} onClick={() => activate(false)}>
+            <i className='fa-solid fa-arrow-left'/>
+          </button>
+          <button className={btn} onClick={() => activate(true)}>
+            <i className='fa-solid fa-arrow-right'/>
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

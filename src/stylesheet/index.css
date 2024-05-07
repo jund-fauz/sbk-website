@@ -106,7 +106,8 @@
 
 .second-content {
     height: 40px;
-    margin-top: -10px;
+    margin-top: -20px;
+    opacity: 70%;
 }
 
 .bg-color-primary {
@@ -271,6 +272,7 @@
         border-radius: 0 16px 16px 0;
         text-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
         background-color: rgba(90, 173, 215, .75);
+
         & > p {
             font-size: 14px;
             font-weight: 300;
