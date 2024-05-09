@@ -318,8 +318,9 @@ div {
     }
 }
 
-.hover-dark:hover {
-    /*filter: contrast(70%);*/
+.bg-petinggi {
+    background-image: url("/pictures/bg-petinggi.png");
+    background-size: 100%;
 }
 
 @media screen and (max-width: 1279px) {

@@ -11,7 +11,7 @@ export default function Main() {
     <AnimatedPage>
       <SBK/>
       <BGBlack/>
-      <div className="bg-white third-content d-flex flex-column" style={{gap: '250px', marginTop: '200px'}}>
+      <div className="bg-white third-content d-flex flex-column" style={{gap: '250px', paddingTop: '200px'}}>
         <Cards/>
         <LearnBasics/>
       </div>

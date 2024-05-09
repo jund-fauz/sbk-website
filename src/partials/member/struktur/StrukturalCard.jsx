@@ -24,7 +24,7 @@ export default function StrukturalCard({jabatan = '', members = [], ikhwan = 3})
       let divs = []
       count = typeof from !== 'undefined' ? count + from : count
       for (let i = from || 0; i < count; i++) {
-        divs.push(typeof members[i] !== 'undefined' ? <Member key={i} member={members[i]}/> : <Member />)
+        divs.push(typeof members[i] !== 'undefined' ? <Member key={i} member={members[i]}/> : <Member/>)
         countNumber++
       }
       return divs
@@ -35,13 +35,16 @@ export default function StrukturalCard({jabatan = '', members = [], ikhwan = 3})
   useEffect(() => console.log(members.length), [members])
   return (
     <div className={`${style.card} d-flex flex-column align-items-center gap-2 pt-2 mt-4`}>
-      <h1 className={style.title}>{jabatan}</h1>
+      <div className='d-flex justify-content-between'>
+
+        <h1 className={style.title}>{jabatan}</h1>
+      </div>
       <MemberImageContainer justifyContent={justifyContent}>
         {few ? getMemberDiv('all') : (
           <>
             <ManyMembersContainer>
               <TwoMembersFromManyContainer>{getMemberDiv(2)}</TwoMembersFromManyContainer>
-              {ikhwan === 3 && members.length === 5 || members.length === 6 ? getMemberDiv(1, countNumber) : <Member />}
+              {ikhwan === 3 && members.length === 5 || members.length === 6 ? getMemberDiv(1, countNumber) : <Member/>}
             </ManyMembersContainer>
             <ManyMembersContainer>
               {getMemberDiv(1, countNumber)}

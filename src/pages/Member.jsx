@@ -25,11 +25,11 @@ export default function Member() {
 
   return (
     <AnimatedPage bgColor='#CECECE'>
-      <div className='d-flex flex-column align-items-center'>
+      <div className='d-flex flex-column align-items-center bg-petinggi pb-5'>
         <Petinggi jabatan='penanggung jawab' nama='devit hari ashari, s.pd.' gambar='devit-cache'
-                  alt='Ustadz Devit Hari Ashari' mt='0' my='3'/>
+                  alt='Ustadz Devit Hari Ashari' mt='5' my='3'/>
         <Petinggi jabatan='pembina' nama='diantika arifianti, s.t.' gambar='devit-cache' alt='Ustadzah Dian' mt='5'
-                  my='4'/>
+                  my='3'/>
       </div>
       <GenSwitch gen={gen} changeGen={changeGen}/>
       <Struktur>
